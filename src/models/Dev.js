@@ -13,7 +13,12 @@ const DevSchema = new Schema({
     avatar: {
         type: String,
         require: true
-    }
+    },
+    likes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Dev'
+    }],
+    dislikes: [],
 }, {
     timestamps: true,
 });
